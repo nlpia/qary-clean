@@ -14,10 +14,7 @@ FIXME: Use builtin pathlib.Path and URL classes
 'basename'
 """
 import os
-<<<<<<< HEAD
 from pathlib import Path
-=======
->>>>>>> master
 
 
 def url_filename(url):
@@ -28,17 +25,10 @@ def url_filename(url):
     >>> url_filename('whatever.com/abs/dir/name.txt')
     'name.txt'
     """
-<<<<<<< HEAD
     return Path(url).name
 
 
-def path_filename(path):
-=======
-    return url.rstrip('/').split('/')[-1]
-
-
 def path_filename(url):
->>>>>>> master
     """ Extract filename.ext from a path
 
     >>> path_filename('/whatever.com/abs/dir/name/')
@@ -46,11 +36,7 @@ def path_filename(url):
     >>> path_filename('/whatever.com/abs/dir/name.txt')
     'name.txt'
     """
-<<<<<<< HEAD
-    return url_filename(path)
-=======
-    return url.rstrip(os.path.sep).split(os.path.sep)[-1]
->>>>>>> master
+    return url_filename(url)
 
 
 def basename(filename):
@@ -63,11 +49,8 @@ def basename(filename):
     >>> basename('http://example.com/abs/dir/name/')
     'name'
     """
-<<<<<<< HEAD
+
     filename = str(url_filename(filename))
-=======
-    filename = url_filename(filename)
->>>>>>> master
     for i in range(256):
         filename, ext = os.path.splitext(filename)
         if not ext or not filename:
