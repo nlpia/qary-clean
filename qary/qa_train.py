@@ -5,11 +5,7 @@ import logging
 
 from tqdm import tqdm
 
-<<<<<<< HEAD
-from .constants import DATA_DIR
-=======
-from qary.constants import DATA_DIR
->>>>>>> master
+from qary.constants import DATA_DIR, USE_CUDA
 log = logging.getLogger(__name__)
 
 
@@ -43,12 +39,10 @@ def load_trainset(train_path=ST_TRAINING_JSON, squad_path=SQUAD_TRAINING_JSON):
 
 def train_squad(train_path=ST_TRAINING_JSON, squad_path=SQUAD_TRAINING_JSON):
     trainset = load_trainset(train_path, squad_path=squad_path)
-<<<<<<< HEAD
-    model = QuestionAnsweringModel('distilbert', 'distilbert-base-uncased-distilled-squad',
-=======
-    model = QuestionAnsweringModel('distilbert', 'distilbert-base-uncased-distilled-squad', use_cuda=False,
->>>>>>> master
-                                   args={'reprocess_input_data': True, 'overwrite_output_dir': True})
+
+    model = QuestionAnsweringModel(
+        'distilbert', 'distilbert-base-uncased-distilled-squad', use_cuda=USE_CUDA,
+        args={'reprocess_input_data': True, 'overwrite_output_dir': True})
     model.train_model(trainset)
 
     return model
