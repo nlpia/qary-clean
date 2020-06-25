@@ -1,7 +1,11 @@
 import os
 import sys
 import logging
+<<<<<<< HEAD
 from pathlib import Path
+=======
+# from pathlib import Path
+>>>>>>> master
 from collections import Counter
 
 import nltk
@@ -40,6 +44,7 @@ EXIT_COMMANDS = set('exit quit bye goodbye cya'.split())
 LARGE_FILES = {
     'floyd': dict(
         url='https://tan.sfo2.cdn.digitaloceanspaces.com/midata/public/corpora/floyd.pkl',
+<<<<<<< HEAD
         path=Path(DATA_DIR, 'corpora', 'wikipedia', 'floyd.pkl')),
     'wikipedia_articles': dict(
         url='https://tan.sfo2.cdn.digitaloceanspaces.com/midata/public/corpora/articles_with_keywords.pkl',
@@ -47,6 +52,15 @@ LARGE_FILES = {
     'albert-large-v2': dict(
         url='https://tan.sfo2.cdn.digitaloceanspaces.com/midata/public/models/qa/articles_with_keywords.pkl',
         path=Path(DATA_DIR, 'models', 'qa', 'albert-large-v2-0.2.0.zip')),
+=======
+        path=os.path.join(DATA_DIR, 'wikipedia', 'floyd.pkl')),
+    'wikipedia_articles': dict(
+        url='https://tan.sfo2.cdn.digitaloceanspaces.com/midata/public/corpora/articles_with_keywords.pkl',
+        path=os.path.join(DATA_DIR, 'wikipedia', 'articles_with_keywords.pkl')),
+    'albert-large-v2': dict(
+        url='https://tan.sfo2.cdn.digitaloceanspaces.com/midata/public/models/qa/articles_with_keywords.pkl',
+        path=os.path.join(DATA_DIR, 'models', 'qa', 'albert-large-v2-0.2.0.zip')),
+>>>>>>> master
 }
 tmp_large_files = {}
 for name, meta in LARGE_FILES.items():

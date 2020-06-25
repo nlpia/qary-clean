@@ -29,7 +29,11 @@
   Q: What is the residual for a machine learning model? #student #springboard #DaLo #20200603120000
   A: The signed error or the difference between the model predictions and the truth. For example `residual = y_test_pred - y_train_pred`. If you see any pattern like a U shape or curvature in the plots of residual vs any of your features, that's an indication that you could generate a new feature by squaring or taking the square root of that feature variable. #teacher #springboard #DaLo #20200603113000
 -
+<<<<<<< HEAD
   Q: Besides identifying which model was the best and what it's accuracy is what else should I include in my final report.  #student #springboard #JuCh #202006031800
+=======
+  Q: Besides identifying which model was the best and what it's accuracy is what else should I include in my final report.  #student #springboard #JuCh ##202006031800
+>>>>>>> master
   A: You should also answer "why" questions rather than just "what" questions. Consider questions that two different audiences would ask, data scientists and business managers. Why should each of them care about your results. How can business managers use your results to improve their businesses. How can data scientists learn from your approach and apply it to future data science problems.
 -
   Q: I have a categorical variable like gender or business segment as a feature in my model. Would it improve the accuracy of my model to build separate models for each category or class?
@@ -75,6 +79,7 @@
 -
   Q: Is there a good way to filter out unimportant words like `the` or `of` when creating a Data Science model? #KeLa #student #202006141800
   A: Yes, but you should not do it based on your human judgement and domain knowledge. Instead rely on the `TfidfVectorizer` to weight words according to their importance. If you cannot load all possible words or n-grams into memory for processing then you can set `min_df` and `max_df` to values like `min_df=10` and `max_df=.5`. Keep reducing `max_df` and increasing `min_df` until your pipeline runs quickly and you get an accuracy score. Then continue to tune the other hyperparameters of your pipeline to try to improve accuracy.
+<<<<<<< HEAD
 -
   Q: "My friends who work at large corporations, banks, and consulting firms find that they are mostly required to do software development and debugging of existing Data Science pipelines. Where can I find employers that provide more creative work developing new approaches to Data Science?" #202006160930 #MaJu #student
   A: "Startups require employees to perform many roles. Data Scientists at startups often have architect databases and software while also designing and building data science pipelines. You can find startup job postings by following startups in your region and reading blogs and news sites that investors read, like Y-Combinator, AngelList, and TechCrunch. There's a good list of startup blogs on feedspot.com: https://blog.feedspot.com/startup_blogs/."
@@ -153,4 +158,6 @@
 -
   Q: Where should I deploy my first chatbot?
   A: Within a messaging platform or forum where people are already interacting with you or your team or each other. Ideally this should be an internal system that isn't exposed to customers or beneficiaries until it is deemed useful. For example use it on Slack internally with your team before you deploy it to Twitter, Reddit, Facebook, or SMS.
+=======
+>>>>>>> master
 
